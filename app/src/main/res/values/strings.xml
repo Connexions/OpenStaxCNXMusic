@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">OpenStax CNX Music</string>
+    <string name="title_activity_landing">open&lt;b&gt;stax&lt;/b&gt; cnx music</string>
+    <string name="webcontent">webcontent</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_webview">WebviewActivity</string>
+    <string name="menu_add_to_bm">Add to Bookmarks</string>
+    <string name="menu_go_to_bm">Go to Bookmarks</string>
+    <string name="menu_share">Share</string>
+    <string name="mimetype_text">text/plain</string>
+    <string name="shared_via"> Shared via OpenStax CNX Music app.</string>
+    <string name="tell_friend">Tell a friend about </string>
+    <string name="no_data_msg">Data needed to share is not available.  Use the back button to refresh and try again.</string>
+    <string name="oscm_package">org.cnx.openstaxcnxmusic</string>
+    <string name="license_title">Open Source Licenses</string>
+    <string name="title_bookmarks">bookmarks</string>
+    <string name="about">About</string>
+</resources>

@@ -1,0 +1,70 @@
+{
+  "bookList":[
+    {
+      "bookTitle":"Understanding Your French Horn",
+      "title":"Understanding Your French Horn",
+      "desc":"For eighth grade and up, a series of lessons that can be offered by an instructor or done as a self-study course, to teach French horn players more about their instrument.",
+      "url":"http://cnx.org/contents/63pUjpNV:-ac2lMAF?minimal=true"
+    },
+    {
+      "bookTitle":"A Parent's Guide to Band",
+      "title":"A Parent's Guide to Band",
+      "desc":"For the families of students involved in a school band program, information about typical programs, band instruments, lessons, and practice. ",
+      "url":"http://cnx.org/contents/5tY1uUpV:giH50MfF?minimal=true"
+    },
+    {
+      "bookTitle":"Noisy Learning: Loud but Fun Music Education Activities",
+      "title":"Noisy Learning: Loud but Fun Music Education Activities",
+      "desc":"The activities in this course are designed for children preschool or elementary school age. Some introduce basic music concepts; others focus on music of a particular culture. All encourage noise and activity, so they make excellent breaks from desk work, but be sure you are not disturbing the class down",
+      "url":"http://cnx.org/contents/vrLsG4BO:qzNDiAz7?minimal=true"
+    },
+    {
+      "bookTitle":"Frequency and Music",
+      "title":"Frequency and Music",
+      "desc":"An overview of frequency, harmonic (Fourier) series, and their relationship to music.",
+      "url":"http://cnx.org/contents/qr4JzPAs:-ac2lMAF?minimal=true"
+    },
+    {
+      "bookTitle":"The Basic Elements of Music",
+      "title":"The Basic Elements of Music",
+      "desc":"Explanations (suitable for any age) of the basic elements of music, with suggested activities for introducing the each concept to children at early elementary school level. The course may be used by instructors not trained in music; all necessary definitions and explanations are included.",
+      "url":"http://cnx.org/contents/ntLJYC2n:fWmMtOTx?minimal=true"
+    },
+    {
+      "bookTitle":"Reading Music: Common Notation",
+      "title":"Reading Music: Common Notation",
+      "desc":"This course may be used to introduce or reinforce music-reading skills for someone just learning to play an instrument, or the individual lessons can be used to expand on basic music-reading knowledge or to look up any music-notation terms that are still unfamiliar.",
+      "url":"http://cnx.org/contents/iUyUmVyR:K6Bdtk0k?minimal=true"
+    },
+    {
+      "bookTitle":"Beginning Guitar",
+      "title":"Beginning Guitar",
+      "desc":"A beginning guitar course, meant for individual or small-group lessons with an experienced instructor. After completing this course, the student should be ready to begin serious study in any guitar style.",
+      "url":"http://cnx.org/contents/iS3RxTuz:xrklkg7j?minimal=true"
+    },
+    {
+      "bookTitle":"Musical Travels for Children",
+      "title":"Musical Travels for Children",
+      "desc":"A combination social studies and music course for children at elementary school level. Some lessons feature music to learn; others introduce interesting aspects of music in other cultures. Individual lessons can be used in any order or left out.",
+      "url":"http://cnx.org/contents/Q1VXjVm0:64dx_Sgl?minimal=true"
+    },
+    {
+      "bookTitle":"Introduction to Music Theory",
+      "title":"Introduction to Music Theory",
+      "desc":"This course introduces the basic concepts and terms needed to discuss melody and harmony. It is intended for teens or adults with no background in music theory but some familiarity with reading common notation and playing an instrument (or singing). Concepts covered include interval, major and minor keys and scales",
+      "url":"http://cnx.org/contents/LSnasyP3:ta2InDgE?minimal=true"
+    },
+    {
+      "bookTitle":"Understanding Basic Music Theory",
+      "title":"Understanding Basic Music Theory",
+      "desc":"An expanded version of \"Introduction to Music Theory\", this course includes a review of common notation and an introduction to the physics behind music theory, as well as the basic concepts of music theory and a few slightly advanced but very useful topics, such as transposition.",
+      "url":"http://cnx.org/contents/KtdLe6cv:_GmJ4ENa?minimal=true"
+    },
+    {
+      "bookTitle":"Sound, Physics and Music",
+      "title":"Sound, Physics and Music",
+      "desc":"For middle school and up, a short course that explains acoustics (the physics of sound waves) as it relates to music and musical instruments. Suggestions for presenting some of the concepts to younger students are included.",
+      "url":"http://cnx.org/contents/GOQaowEz:ZSG7escu?minimal=true"
+    }
+  ]
+}

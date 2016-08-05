@@ -1,0 +1,16 @@
+{
+  "aboutList": [
+    {
+      "title": "About OpenStax CNX",
+      "blurb": "OpenStax CNX is part of the OpenStax project at Rice University. OpenStax CNX allows users to create, edit and reuse open education content. All of the content is licensed Creative Commons CC-BY."
+    },
+    {
+      "title": "About The Music Books",
+      "blurb": "All of the books were created by users of OpenStax CNX and are not part of the OpenStax family of peer-reviewed textbooks. Authors are Catherine Schmidt-Jones and Douglas L. Jones. See the tabs at the bottom of any book page for additional attribution and information."
+    },
+    {
+      "title": "About The Icons",
+      "blurb": "The music icons used in the app were created by icons8.com and are licenced Creative Commons Attribution-NoDerivs 3.0 Unported. <br/><ul><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Tuba: </strong> http://www.iconsplace.com/turquoise-icons/tuba-icon</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Xylophone: </strong> http://www.iconsplace.com/purple-icons/xylophone-icon</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Note: </strong> http://www.iconsplace.com/navy-icons/note-icon</li><br/><li>&nbsp;&nbsp;&nbsp;&#8226;<strong> Treble Clef: </strong> http://www.iconsplace.com/navy-icons/treble-clef-icon</li><br/><li></ul>"
+    }
+  ]
+}
