@@ -1,6 +1,8 @@
 # OpenStaxCNXMusic
 Android app highlighting CNX Music textbooks
 
+[Screenshot](Screenshot.png)
+
 Users can
  - read music textbooks from OpenStax CNX
  - create bookmarks
