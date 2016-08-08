@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2016 Rice University
+ *
+ * This software is subject to the provisions of the GNU Lesser General
+ * Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
+ */
 package org.cnx.openstaxcnxmusic.adapters;
 
 import android.content.Context;
@@ -15,7 +21,8 @@ import org.cnx.openstaxcnxmusic.beans.About;
 import java.util.ArrayList;
 
 /**
- * Created by ew2 on 7/27/16.
+ * Adapter for displaying cards for About Us information
+ * @author Ed Woodward
  */
 public class AboutRecyclerViewAdapter extends RecyclerView.Adapter<AboutRecyclerViewAdapter.ViewHolder>
 {

@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2016 Rice University
+ *
+ * This software is subject to the provisions of the GNU Lesser General
+ * Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
+ */
 package org.cnx.openstaxcnxmusic.adapters;
 
 import android.animation.AnimatorInflater;
@@ -23,7 +29,8 @@ import java.util.ArrayList;
 import co.paulburke.android.itemtouchhelperdemo.helper.ItemTouchHelperAdapter;
 
 /**
- * Created by ew2 on 7/21/16.
+ * Adapter for displaying Bookmark cards
+ * @author Ed Woodward
  */
 public class BookmarkRecyclerViewAdapter extends RecyclerView.Adapter<BookmarkRecyclerViewAdapter.ViewHolder> implements ItemTouchHelperAdapter
 {
