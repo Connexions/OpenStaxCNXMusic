@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2016 Rice University
+ *
+ * This software is subject to the provisions of the GNU Lesser General
+ * Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
+ */
 package org.cnx.openstaxcnxmusic.fragments;
 
 import android.app.Activity;
@@ -26,7 +32,8 @@ import co.paulburke.android.itemtouchhelperdemo.helper.OnStartDragListener;
 import co.paulburke.android.itemtouchhelperdemo.helper.SimpleItemTouchHelperCallback;
 
 /**
- * Created by ew2 on 7/21/16.
+ * Fragment for display of Bookmarks
+ * @author Ed Woodward
  */
 public class BookmarkFragment extends Fragment implements OnStartDragListener
 {
