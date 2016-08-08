@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2016 Rice University
+ *
+ * This software is subject to the provisions of the GNU Lesser General
+ * Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
+ */
 package org.cnx.openstaxcnxmusic.providers;
 
 import android.database.Cursor;
@@ -7,7 +13,8 @@ import org.cnx.openstaxcnxmusic.beans.Book;
 import java.util.ArrayList;
 
 /**
- * Created by ew2 on 7/21/16.
+ * Utility class for database
+ * @author Ed Woodward
  */
 public class DBUtils
 {

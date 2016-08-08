@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2016 Rice University
+ *
+ * This software is subject to the provisions of the GNU Lesser General
+ * Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
+ */
 package org.cnx.openstaxcnxmusic.fragments;
 
 import android.app.Activity;
@@ -26,7 +32,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
- * Created by ew2 on 7/27/16.
+ * Fragment for display of About Us information
+ * @author Ed Woodward
  */
 public class AboutFragment extends Fragment
 {

@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2016 Rice University
+ *
+ * This software is subject to the provisions of the GNU Lesser General
+ * Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
+ */
 package org.cnx.openstaxcnxmusic.activity;
 
 import android.content.Context;
@@ -17,6 +23,10 @@ import org.cnx.openstaxcnxmusic.helpers.MenuHelper;
 import org.cnx.openstaxcnxmusic.R;
 import org.cnx.openstaxcnxmusic.fragments.LandingListFragment;
 
+/**
+ * Activity for initial screen
+ * @author Ed Woodward
+ */
 public class LandingActivity extends AppCompatActivity
 {
 

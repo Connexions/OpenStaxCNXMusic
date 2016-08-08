@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2016 Rice University
+ *
+ * This software is subject to the provisions of the GNU Lesser General
+ * Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
+ */
 package org.cnx.openstaxcnxmusic.activity;
 
 import android.content.Intent;
@@ -11,7 +17,8 @@ import org.cnx.openstaxcnxmusic.R;
 import org.cnx.openstaxcnxmusic.fragments.AboutFragment;
 
 /**
- * Created by ew2 on 7/27/16.
+ * Activity for About Us
+ * @author Ed Woodward
  */
 public class AboutActivity extends AppCompatActivity
 {

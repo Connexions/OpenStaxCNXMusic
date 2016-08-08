@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2016 Rice University
+ *
+ * This software is subject to the provisions of the GNU Lesser General
+ * Public License Version 2.1 (LGPL).  See LICENSE.txt for details.
+ */
 package org.cnx.openstaxcnxmusic.activity;
 
 import android.content.Intent;
@@ -19,6 +25,10 @@ import org.cnx.openstaxcnxmusic.R;
 import org.cnx.openstaxcnxmusic.beans.Book;
 import org.cnx.openstaxcnxmusic.logic.WebviewLogic;
 
+/**
+ * Activity for viewing book content
+ * @author Ed Woodward
+ */
 public class WebviewActivity extends AppCompatActivity
 {
     private boolean progressBarRunning;
