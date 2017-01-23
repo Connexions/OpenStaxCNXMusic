@@ -15,4 +15,7 @@
     <string name="license_title">Open Source Licenses</string>
     <string name="title_bookmarks">bookmarks</string>
     <string name="about">About</string>
+    <string name="bookmarks_shortcut_short_label">Bookmarks</string>
+    <string name="bookmarks_shortcut_long_label">Open Bookmarks</string>
+    <string name="bookmarks_shortcut_disabled_message">Shortcut is disabled</string>
 </resources>
