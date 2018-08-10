@@ -7,28 +7,21 @@
 package org.cnx.openstaxcnxmusic.fragments;
 
 import android.app.Activity;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.google.gson.Gson;
 
 import org.cnx.openstaxcnxmusic.R;
 import org.cnx.openstaxcnxmusic.adapters.AboutRecyclerViewAdapter;
 import org.cnx.openstaxcnxmusic.beans.About;
 import org.cnx.openstaxcnxmusic.beans.AboutList;
+import org.cnx.openstaxcnxmusic.helpers.JsonHelperKT;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
@@ -55,39 +48,26 @@ public class AboutFragment extends Fragment
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
-        recyclerView = (RecyclerView) getView().findViewById(R.id.recycler_view);
+        recyclerView = getView().findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(activity));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setNestedScrollingEnabled(false);
-        adapter = new AboutRecyclerViewAdapter(getContent(), R.layout.about_row, activity);
+        adapter = new AboutRecyclerViewAdapter(getContent(), R.layout.about_row);
         recyclerView.setAdapter(adapter);
     }
 
     private ArrayList<About> getContent()
     {
-        AboutList aboutList = readJson();
-        return aboutList.getAboutList();
-    }
-
-    private AboutList readJson()
-    {
-        AssetManager assets = getActivity().getAssets();
-        AboutList aboutList = new AboutList();
-
-        Gson gson = new Gson();
-
-        try
+        JsonHelperKT helper = new JsonHelperKT();
+        AboutList aboutList = helper.getAboutData(activity, AboutList.class, "aboutList.json");
+        if(aboutList != null)
         {
-            InputStream is = assets.open("aboutList.json");
-            BufferedReader bf = new BufferedReader(new InputStreamReader(is));
-            aboutList = gson.fromJson(bf,AboutList.class);
+            return aboutList.getAboutList();
         }
-        catch(IOException ioe)
+        else
         {
-            Log.d("json", "Some problem: " + ioe.toString());
+            return new ArrayList<>();
         }
-
-        return aboutList;
     }
 
 }

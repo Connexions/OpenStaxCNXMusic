@@ -35,15 +35,14 @@ import co.paulburke.android.itemtouchhelperdemo.helper.ItemTouchHelperAdapter;
 public class BookmarkRecyclerViewAdapter extends RecyclerView.Adapter<BookmarkRecyclerViewAdapter.ViewHolder> implements ItemTouchHelperAdapter
 {
     private ArrayList<Book> contentList;
-    Book content;
-    static Context CONTEXT;
+    private Context context;
     private int rowLayout;
 
     public BookmarkRecyclerViewAdapter(ArrayList<Book> content, int rowLayout, Context context)
     {
         contentList = content;
         this.rowLayout = rowLayout;
-        CONTEXT = context;
+        this.context = context;
     }
 
     @Override
@@ -56,7 +55,7 @@ public class BookmarkRecyclerViewAdapter extends RecyclerView.Adapter<BookmarkRe
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i)
     {
-        content = contentList.get(i);
+        Book content = contentList.get(i);
         viewHolder.title.setText(content.getTitle());
         viewHolder.desc.setText(content.getDesc());
 
@@ -73,10 +72,10 @@ public class BookmarkRecyclerViewAdapter extends RecyclerView.Adapter<BookmarkRe
     public void onItemDismiss(int position)
     {
         Book currentContent = contentList.get(position);
-        CONTEXT.getContentResolver().delete(Bookmarks.CONTENT_URI, "_id="+ currentContent.getId(), null);
+        context.getContentResolver().delete(Bookmarks.CONTENT_URI, "_id="+ currentContent.getId(), null);
         contentList.remove(position);
         notifyItemRemoved(position);
-        Toast.makeText(CONTEXT, "Bookmark deleted for " + currentContent.getTitle(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Bookmark deleted for " + currentContent.getTitle(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -85,7 +84,7 @@ public class BookmarkRecyclerViewAdapter extends RecyclerView.Adapter<BookmarkRe
         return true;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
         public ImageView logo;
         public TextView title;
@@ -99,11 +98,11 @@ public class BookmarkRecyclerViewAdapter extends RecyclerView.Adapter<BookmarkRe
             view = itemView;
             this.contentList = contentList;
 
-            logo = (ImageView) itemView.findViewById(R.id.logoView);
-            title = (TextView)itemView.findViewById(R.id.bookName);
-            desc = (TextView)itemView.findViewById(R.id.desc);
+            logo = itemView.findViewById(R.id.logoView);
+            title = itemView.findViewById(R.id.bookName);
+            desc = itemView.findViewById(R.id.desc);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                StateListAnimator stateListAnimator = AnimatorInflater.loadStateListAnimator(CONTEXT, R.anim.lift_on_touch);
+                StateListAnimator stateListAnimator = AnimatorInflater.loadStateListAnimator(context, R.anim.lift_on_touch);
                 itemView.setStateListAnimator(stateListAnimator);
             }
             itemView.setOnClickListener(this);

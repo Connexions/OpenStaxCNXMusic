@@ -29,14 +29,12 @@ public class LandingListRecyclerViewAdapter extends RecyclerView.Adapter<Landing
 {
 
     private int rowLayout;
-    Context context;
     private ArrayList<Book> contentList;
 
-    public LandingListRecyclerViewAdapter(ArrayList<Book> content, int rowLayout, Context context)
+    public LandingListRecyclerViewAdapter(ArrayList<Book> content, int rowLayout)
     {
         contentList = content;
         this.rowLayout = rowLayout;
-        this.context = context;
     }
 
     @Override
@@ -71,8 +69,8 @@ public class LandingListRecyclerViewAdapter extends RecyclerView.Adapter<Landing
         {
             super(itemView);
             this.contentList = contentList;
-            bookTitle = (TextView) itemView.findViewById(R.id.title);
-            desc = (TextView) itemView.findViewById(R.id.details);
+            bookTitle = itemView.findViewById(R.id.title);
+            desc = itemView.findViewById(R.id.details);
             itemView.setOnClickListener(this);
         }
 
