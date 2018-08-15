@@ -6,7 +6,6 @@
  */
 package org.cnx.openstaxcnxmusic.adapters;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
@@ -27,14 +26,12 @@ import java.util.ArrayList;
 public class AboutRecyclerViewAdapter extends RecyclerView.Adapter<AboutRecyclerViewAdapter.ViewHolder>
 {
     private int rowLayout;
-    Context context;
     private ArrayList<About> contentList;
 
-    public AboutRecyclerViewAdapter(ArrayList<About> content, int rowLayout, Context context)
+    public AboutRecyclerViewAdapter(ArrayList<About> content, int rowLayout)
     {
         contentList = content;
         this.rowLayout = rowLayout;
-        this.context = context;
     }
 
     @Override
@@ -73,8 +70,8 @@ public class AboutRecyclerViewAdapter extends RecyclerView.Adapter<AboutRecycler
             super(itemView);
             this.contentList = contentList;
 
-            title = (TextView) itemView.findViewById(R.id.title);
-            blurb = (TextView)itemView.findViewById(R.id.blurb);
+            title = itemView.findViewById(R.id.title);
+            blurb = itemView.findViewById(R.id.blurb);
 
         }
 
