@@ -15,6 +15,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,7 +70,7 @@ public class BookmarkFragment extends Fragment implements OnStartDragListener
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
-        recyclerView = (RecyclerView)getView().findViewById(R.id.recycler_view);
+        recyclerView = getView().findViewById(R.id.recycler_view);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(activity));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -81,6 +82,7 @@ public class BookmarkFragment extends Fragment implements OnStartDragListener
         if(content == null)
         {
             //no previous data, so database must be read
+            //Log.d("Bookmark", "content is null");
             readDB();
         }
         else
@@ -119,6 +121,7 @@ public class BookmarkFragment extends Fragment implements OnStartDragListener
 
     protected void finishedLoadingList()
     {
+        //Log.d("Bookmark", "finishLoadingList() called");
         recyclerView.setAdapter(adapter);
         ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(adapter);
         itemTouchHelper = new ItemTouchHelper(callback);
@@ -128,6 +131,7 @@ public class BookmarkFragment extends Fragment implements OnStartDragListener
     /** reads feed in a separate thread.  Starts progress dialog*/
     private void readDB()
     {
+        //Log.d("Bookmark", "readDB() called");
         Thread loadFavsThread = new Thread()
         {
             public void run()
@@ -152,7 +156,7 @@ public class BookmarkFragment extends Fragment implements OnStartDragListener
      */
     private void fillData(ArrayList<Book> contentList)
     {
-        //Log.d("LensViewer", "fillData() called");
+        //Log.d("Bookmark", "fillData() called");
         adapter = new BookmarkRecyclerViewAdapter(contentList, R.layout.card_row,activity);
     }
 

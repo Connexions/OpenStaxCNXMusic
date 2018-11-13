@@ -36,6 +36,10 @@ public class LandingListFragment extends Fragment
 
     Activity activity;
 
+    public static int index = -1;
+    public static int top = -1;
+    LinearLayoutManager layoutManager;
+
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
@@ -58,12 +62,85 @@ public class LandingListFragment extends Fragment
         super.onViewCreated(view, savedInstanceState);
         super.onActivityCreated(savedInstanceState);
         recyclerView = getView().findViewById(R.id.list);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(activity));
+        layoutManager = new LinearLayoutManager(activity);
+        recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setNestedScrollingEnabled(false);
         LandingListRecyclerViewAdapter adapter = new LandingListRecyclerViewAdapter(getContent(), R.layout.fragment_book);
         recyclerView.setAdapter(adapter);
+
+        if(index != -1)
+        {
+            layoutManager.scrollToPositionWithOffset( index, top);
+        }
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        index = layoutManager.findFirstVisibleItemPosition();
+        View v = recyclerView.getChildAt(0);
+        if(v == null)
+        {
+            top = 0;
+        }
+        else
+        {
+            top = (v.getTop() - recyclerView.getPaddingTop());
+        }
+    }
+
+    @Override
+    public void onStop()
+    {
+        super.onStop();
+        index = layoutManager.findFirstVisibleItemPosition();
+        View v = recyclerView.getChildAt(0);
+        if(v == null)
+        {
+            top = 0;
+        }
+        else
+        {
+            top = (v.getTop() - recyclerView.getPaddingTop());
+        }
+    }
+
+    @Override
+    public void onDetach()
+    {
+        super.onDetach();
+        index = layoutManager.findFirstVisibleItemPosition();
+        View v = recyclerView.getChildAt(0);
+        if(v == null)
+        {
+            top = 0;
+        }
+        else
+        {
+            top = (v.getTop() - recyclerView.getPaddingTop());
+        }
+    }
+
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        if(index != -1)
+        {
+            layoutManager.scrollToPositionWithOffset( index, top);
+        }
+    }
+
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+        if(index != -1)
+        {
+            layoutManager.scrollToPositionWithOffset( index, top);
+        }
     }
 
     private ArrayList<Book> getContent()
@@ -80,5 +157,6 @@ public class LandingListFragment extends Fragment
             return new ArrayList<>();
         }
     }
+
 
 }

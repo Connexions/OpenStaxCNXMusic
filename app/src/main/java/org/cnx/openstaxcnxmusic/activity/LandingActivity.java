@@ -9,16 +9,21 @@ package org.cnx.openstaxcnxmusic.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.cnx.openstaxcnxmusic.fragments.BookmarkFragment;
 import org.cnx.openstaxcnxmusic.helpers.MenuHelper;
 import org.cnx.openstaxcnxmusic.R;
 import org.cnx.openstaxcnxmusic.fragments.LandingListFragment;
@@ -35,29 +40,44 @@ public class LandingActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        CollapsingToolbarLayout toolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
+        CollapsingToolbarLayout toolbarLayout = findViewById(R.id.toolbar_layout);
         toolbarLayout.setTitle(Html.fromHtml(getString(R.string.title_activity_landing)));
 
-        if (savedInstanceState == null) {
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            LandingListFragment fragment = new LandingListFragment();
-            transaction.replace(R.id.sample_content_fragment, fragment);
-            transaction.commit();
-        }
-        final Context context = this;
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                Intent intent = new Intent(context, BookmarkActivity.class);
-                context.startActivity(intent);
-            }
-        });
+//        if (savedInstanceState == null) {
+//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//            LandingListFragment fragment = new LandingListFragment();
+//            transaction.replace(R.id.container, fragment);
+//            transaction.commit();
+//        }
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener
+                (new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        Fragment selectedFragment = null;
+                        switch (item.getItemId()) {
+                            case R.id.books_nav:
+                                selectedFragment = new LandingListFragment();
+                                break;
+                            case R.id.bookmarks_nav:
+                                Log.d("Landing","bookmark selected");
+                                selectedFragment = new BookmarkFragment();
+                                break;
+
+                        }
+                        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.container, selectedFragment);
+                        transaction.commit();
+                        return true;
+                    }
+                });
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, new LandingListFragment());
+        transaction.commit();
     }
 
     @Override

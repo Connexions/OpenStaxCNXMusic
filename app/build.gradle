@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '27.0.3'
+    buildToolsVersion '28.0.3'
     project.archivesBaseName = "OpenStaxCNXMusic"
     ext.kotlin_version = '1.2.60'
 
@@ -11,8 +11,8 @@ android {
         applicationId "org.cnx.openstaxcnxmusic"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 5
-        versionName "1.4"
+        versionCode 6
+        versionName "2.0"
     }
     buildTypes {
         release {
