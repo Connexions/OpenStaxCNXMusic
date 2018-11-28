@@ -18,4 +18,5 @@
     <string name="bookmarks_shortcut_short_label">Bookmarks</string>
     <string name="bookmarks_shortcut_long_label">Open Bookmarks</string>
     <string name="bookmarks_shortcut_disabled_message">Shortcut is disabled</string>
+    <string name="books">books</string>
 </resources>
