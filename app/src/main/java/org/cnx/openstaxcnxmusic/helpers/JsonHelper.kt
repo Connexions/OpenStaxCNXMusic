@@ -9,7 +9,7 @@ import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
 
-class JsonHelperKT
+class JsonHelper
 {
 
     fun getAboutData(context: Context, clazz:Class<*>, jsonFile:String): AboutList?
